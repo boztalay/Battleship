@@ -41,7 +41,7 @@ public class Field {
     }
 
     private boolean isShipPlacementValid(Ship shipToCheck) {
-        if(!shipToCheck.isWithinFieldBounds(field.length)) {
+        if(!shipToCheck.isWithinFieldBounds(getSize())) {
             return false;
         }
 
@@ -70,9 +70,11 @@ public class Field {
         return ships.get(shipIndex);
     }
 
-    public SpaceType attemptHitAt(int x, int y) throws ShotAtNonemptySpaceException {
-        if(field[x][y] == SpaceType.EMPTY) {
-            throw new ShotAtNonemptySpaceException();
+    public SpaceType attemptHitAt(int x, int y) throws InvalidShotException {
+        if(field[x][y] != SpaceType.EMPTY) {
+            throw new InvalidShotException();
+        } else if(x < 0 || x >= getSize() || y < 0 || y >= getSize()) {
+            throw new InvalidShotException();
         }
 
         Ship shipOccupyingSpace = getShipOccupyingSpaceAt(x, y);
@@ -105,5 +107,5 @@ public class Field {
     }
 
     public static class InvalidShipPlacementException extends Exception {}
-    public static class ShotAtNonemptySpaceException extends Exception {}
+    public static class InvalidShotException extends Exception {}
 }

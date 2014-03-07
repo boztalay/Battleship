@@ -5,8 +5,13 @@ public class FieldDisplay {
 
     public static void displayFieldForPlayer(Player player) {
         char[][] fieldToDisplay = buildCharacterFieldFromField(player.getField());
-        System.out.println(player.getName() + "'s field");
-        displayField(fieldToDisplay);
+        drawShipsInFieldOnCharacterField(player.getField(), fieldToDisplay);
+        displayCharacterField(player.getName() + "'s field", fieldToDisplay);
+    }
+
+    public static void displayFieldForPlayerWithoutShips(Player player) {
+        char[][] fieldToDisplay = buildCharacterFieldFromField(player.getField());
+        displayCharacterField(player.getName() + "'s field - Without ships", fieldToDisplay);
     }
 
     private static char[][] buildCharacterFieldFromField(Field field) {
@@ -19,7 +24,10 @@ public class FieldDisplay {
             }
         }
 
-        //Draw the ships on top of it, a poor man's drawing buffer
+        return charField;
+    }
+
+    private static void drawShipsInFieldOnCharacterField(Field field, char[][] charField) {
         for(int i = 0; i < field.getNumberOfShips(); i++) {
             Ship shipToDisplay = field.getShip(i);
 
@@ -38,12 +46,12 @@ public class FieldDisplay {
                 }
             }
         }
-
-        return charField;
     }
 
     //Assumes the field's dimensions are both less than 100
-    public static void displayField(char[][] field) {
+    private static void displayCharacterField(String fieldLabel, char[][] field) {
+        System.out.println(fieldLabel);
+
         System.out.print("   ");
         for(int i = 0; i < field.length; i++) {
             printIntWithMinimumTwoDigitsAndTrailingSpace(i);

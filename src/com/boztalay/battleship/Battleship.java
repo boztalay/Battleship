@@ -29,7 +29,16 @@ public class Battleship {
         runShipPlacementForPlayer(player2);
         ConsoleUtils.clearConsole();
 
-        //Game loop here
+        while(true) {
+            //Game loop
+
+            runTurn(player1, player2);
+            ConsoleUtils.clearConsole();
+            //Check endgame
+            runTurn(player2, player1);
+            ConsoleUtils.clearConsole();
+            //Check endgame
+        }
 
         //End game
     }
@@ -93,5 +102,49 @@ public class Battleship {
         }
 
         return new Ship(shipX, shipY, shipOrientation, shipType);
+    }
+
+    private void runTurn(Player playerGoing, Player otherPlayer) {
+        System.out.println(playerGoing.getName() + ", you're up! Press enter to continue");
+        ConsoleUtils.waitForUserToPressEnter();
+
+        FieldDisplay.displayFieldForPlayer(playerGoing);
+        System.out.println();
+        FieldDisplay.displayFieldForPlayerWithoutShips(otherPlayer);
+
+        while(true) {
+            System.out.print("Enter the coordinate to fire at (x,y): ");
+            String coordinate = ConsoleUtils.readLine();
+
+            try {
+                if(!isShotCoordinateStringValid(coordinate)) {
+                    throw new Field.InvalidShotException();
+                }
+
+                String[] coordinateComponents = coordinate.split(",");
+                int shotX = Integer.valueOf(coordinateComponents[0]);
+                int shotY = Integer.valueOf(coordinateComponents[1]);
+
+                boolean didShotHit = otherPlayer.attemptHitAt(shotX, shotY);
+
+                System.out.println();
+                if(didShotHit) {
+                    System.out.println("That was a hit!");
+                } else {
+                    System.out.println("That was a miss!");
+                }
+
+                System.out.println("Press enter to continue");
+                ConsoleUtils.waitForUserToPressEnter();
+
+                break;
+            } catch(Field.InvalidShotException e) {
+                System.out.println("That wasn't a valid shot!");
+            }
+        }
+    }
+
+    boolean isShotCoordinateStringValid(String coordinate) {
+        return Pattern.matches("[0-9]+,[0-9]+", coordinate);
     }
 }

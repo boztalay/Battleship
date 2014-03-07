@@ -9,6 +9,7 @@ public class Main {
             battleship.playBattleship();
         } catch(Exception e) {
             System.out.println("Something went terribly wrong!");
+            System.out.print(e);
         }
     }
 }
