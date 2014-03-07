@@ -20,7 +20,16 @@ public class Ship {
         }
     }
 
-    public enum ShipOrientation { HORIZONTAL, VERTICAL }
+    public enum ShipOrientation {
+        HORIZONTAL('H'),
+        VERTICAL('V');
+
+        public char shortName;
+
+        ShipOrientation(char shortName) {
+            this.shortName = shortName;
+        }
+    }
 
     private int x;
     private int y;

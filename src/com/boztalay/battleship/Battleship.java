@@ -49,7 +49,7 @@ public class Battleship {
             FieldDisplay.displayField(player.getField());
 
             while(true) {
-                System.out.print("Place your " + shipTypeToPlace.name + " at (format: x,y,[H|V]): ");
+                System.out.print("Place your " + shipTypeToPlace.name + " at (format: x,y,<" + Ship.ShipOrientation.HORIZONTAL.shortName + "|" + Ship.ShipOrientation.VERTICAL.shortName + ">): ");
                 String placement = input.readLine();
 
                 if(!isPlacementStringValid(placement)) {
@@ -79,7 +79,7 @@ public class Battleship {
     }
 
     private boolean isPlacementStringValid(String placement) {
-        return Pattern.matches("[0-9]+,[0-9]+,(H|V)", placement);
+        return Pattern.matches("[0-9]+,[0-9]+,(" + Ship.ShipOrientation.HORIZONTAL.shortName + "|" + Ship.ShipOrientation.VERTICAL.shortName + ")", placement);
     }
 
     private Ship parsePlacementStringIntoShip(String placement, Ship.ShipType shipType) {
@@ -89,7 +89,7 @@ public class Battleship {
         int shipY = Integer.valueOf(placementComponents[1]);
 
         Ship.ShipOrientation shipOrientation = Ship.ShipOrientation.HORIZONTAL;
-        if(placementComponents[2].equals("V")) {
+        if(placementComponents[2].equals(String.valueOf(Ship.ShipOrientation.VERTICAL.shortName))) {
             shipOrientation = Ship.ShipOrientation.VERTICAL;
         }
 
