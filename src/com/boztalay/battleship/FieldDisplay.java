@@ -3,8 +3,9 @@ package com.boztalay.battleship;
 public class FieldDisplay {
     private static final char SHIP_CHAR = 'S';
 
-    public static void displayField(Field field) {
-        char[][] fieldToDisplay = buildCharacterFieldFromField(field);
+    public static void displayFieldForPlayer(Player player) {
+        char[][] fieldToDisplay = buildCharacterFieldFromField(player.getField());
+        System.out.println(player.getName() + "'s field");
         displayField(fieldToDisplay);
     }
 
@@ -41,7 +42,7 @@ public class FieldDisplay {
         return charField;
     }
 
-    //Assumes the field's dimensions are both less than 99
+    //Assumes the field's dimensions are both less than 100
     public static void displayField(char[][] field) {
         System.out.print("   ");
         for(int i = 0; i < field.length; i++) {

@@ -104,6 +104,6 @@ public class Field {
         return field[x][y];
     }
 
-    public class InvalidShipPlacementException extends Exception {}
-    public class ShotAtNonemptySpaceException extends Exception {}
+    public static class InvalidShipPlacementException extends Exception {}
+    public static class ShotAtNonemptySpaceException extends Exception {}
 }

@@ -27,7 +27,9 @@ public class Battleship {
         player2 = new Player(player2Name);
 
         runShipPlacementForPlayer(player1);
+        clearConsole();
         runShipPlacementForPlayer(player2);
+        clearConsole();
 
         //Game loop here
 
@@ -35,39 +37,46 @@ public class Battleship {
     }
 
     private void runShipPlacementForPlayer(Player player) throws IOException {
-        System.out.println(player.getName() + ", place your ships! Press enter to continue");
+        System.out.println("\n" + player.getName() + ", place your ships!");
+        System.out.println("For each ship, specify its placement with \"x,y,orientation\"");
+        System.out.println("For example, a vertical ship at 2,2 would be \"2,2," + Ship.ShipOrientation.VERTICAL.shortName + "\". Use '" + Ship.ShipOrientation.HORIZONTAL.shortName + "' for horizontal.");
+        System.out.println("Press enter to continue");
         waitForUserToPressEnter();
 
-        Ship.ShipType[] shipsToPlace = new Ship.ShipType[5];
-        shipsToPlace[0] = Ship.ShipType.CARRIER;
-        shipsToPlace[1] = Ship.ShipType.BATTLESHIP;
-        shipsToPlace[2] = Ship.ShipType.SUBMARINE;
-        shipsToPlace[3] = Ship.ShipType.CRUISER;
-        shipsToPlace[4] = Ship.ShipType.DESTROYER;
+        Ship.ShipType[] shipsToPlace = {
+                Ship.ShipType.CARRIER,
+                Ship.ShipType.BATTLESHIP,
+                Ship.ShipType.SUBMARINE,
+                Ship.ShipType.CRUISER,
+                Ship.ShipType.DESTROYER,
+        };
 
         for(Ship.ShipType shipTypeToPlace : shipsToPlace) {
-            FieldDisplay.displayField(player.getField());
+            FieldDisplay.displayFieldForPlayer(player);
 
             while(true) {
-                System.out.print("Place your " + shipTypeToPlace.name + " at (format: x,y,<" + Ship.ShipOrientation.HORIZONTAL.shortName + "|" + Ship.ShipOrientation.VERTICAL.shortName + ">): ");
+                System.out.print("Place your " + shipTypeToPlace.name + " at: ");
                 String placement = input.readLine();
 
-                if(!isPlacementStringValid(placement)) {
-                    System.out.println("That wasn't a valid placement!");
-                } else {
-                    Ship shipToPlace = parsePlacementStringIntoShip(placement, shipTypeToPlace);
-
-                    try {
+                try {
+                    if(!isPlacementStringValid(placement)) {
+                        throw new Field.InvalidShipPlacementException();
+                    } else {
+                        Ship shipToPlace = parsePlacementStringIntoShip(placement, shipTypeToPlace);
                         player.placeShip(shipToPlace);
-                    } catch(Field.InvalidShipPlacementException e) {
-                        System.out.println("That wasn't a valid placement!");
-                        continue;
+                        break;
                     }
-
-                    break;
+                } catch(Field.InvalidShipPlacementException e) {
+                    System.out.println("That wasn't a valid placement!");
                 }
             }
+
+            System.out.println();
         }
+
+        FieldDisplay.displayFieldForPlayer(player);
+        System.out.println("All of your ships have been placed! Press enter to continue");
+        waitForUserToPressEnter();
     }
 
     private void waitForUserToPressEnter() {
@@ -94,5 +103,12 @@ public class Battleship {
         }
 
         return new Ship(shipX, shipY, shipOrientation, shipType);
+    }
+
+    private void clearConsole() {
+        //A little hacky, but there isn't a nice Java solution
+        for(int i = 0; i < 100; i++) {
+            System.out.println();
+        }
     }
 }

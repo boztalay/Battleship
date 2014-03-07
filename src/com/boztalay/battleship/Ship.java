@@ -103,7 +103,7 @@ public class Ship {
     public boolean doesOccupySpaceAt(int x, int y) {
         if(orientation == ShipOrientation.HORIZONTAL && this.y == y) {
             return (x >= this.x && x < (this.x + this.getLength()));
-        } else if(this.x == x) {
+        } else if(orientation == ShipOrientation.VERTICAL && this.x == x) {
             return (y >= this.y && y < (this.y + this.getLength()));
         }
 
