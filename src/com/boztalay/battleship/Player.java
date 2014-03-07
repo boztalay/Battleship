@@ -32,4 +32,8 @@ public class Player {
     public String getName() {
         return this.name;
     }
+
+    public Field getField() {
+        return this.field;
+    }
 }

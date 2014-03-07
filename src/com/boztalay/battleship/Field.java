@@ -1,19 +1,34 @@
 package com.boztalay.battleship;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Responsible for keeping track of ship placements,
  * along with hits and misses
  */
 public class Field {
-    public enum SpaceType {EMPTY, MISS, HIT}
+    public enum SpaceType {
+        EMPTY('.'),
+        MISS('M'),
+        HIT('H');
+
+        public final char displayChar;
+
+        SpaceType(char displayChar) {
+            this.displayChar = displayChar;
+        }
+    }
 
     private SpaceType[][] field;
     private ArrayList<Ship> ships;
 
     public Field(int fieldSize) {
         field = new SpaceType[fieldSize][fieldSize];
+        for(SpaceType[] fieldRow : field) {
+            Arrays.fill(fieldRow, SpaceType.EMPTY);
+        }
+
         ships = new ArrayList<Ship>();
     }
 
@@ -79,6 +94,14 @@ public class Field {
         }
 
         return null;
+    }
+
+    public int getSize() {
+        return field.length;
+    }
+
+    public SpaceType getSpaceAt(int x, int y) {
+        return field[x][y];
     }
 
     public class InvalidShipPlacementException extends Exception {}
