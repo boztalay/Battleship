@@ -3,6 +3,7 @@ package com.boztalay.battleship;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.regex.Pattern;
 
 /**
  *  Responsible mainly for handling user interaction
@@ -37,23 +38,35 @@ public class Battleship {
         System.out.println(player.getName() + ", place your ships! Press enter to continue");
         waitForUserToPressEnter();
 
-        Ship[] shipsToPlace = new Ship[5];
-        shipsToPlace[0] = new Ship(0, 0, Ship.ShipOrientation.HORIZONTAL, Ship.ShipType.CARRIER);
-        shipsToPlace[1] = new Ship(0, 0, Ship.ShipOrientation.HORIZONTAL, Ship.ShipType.BATTLESHIP);
-        shipsToPlace[2] = new Ship(0, 0, Ship.ShipOrientation.HORIZONTAL, Ship.ShipType.SUBMARINE);
-        shipsToPlace[3] = new Ship(0, 0, Ship.ShipOrientation.HORIZONTAL, Ship.ShipType.CRUISER);
-        shipsToPlace[4] = new Ship(0, 0, Ship.ShipOrientation.HORIZONTAL, Ship.ShipType.DESTROYER);
+        Ship.ShipType[] shipsToPlace = new Ship.ShipType[5];
+        shipsToPlace[0] = Ship.ShipType.CARRIER;
+        shipsToPlace[1] = Ship.ShipType.BATTLESHIP;
+        shipsToPlace[2] = Ship.ShipType.SUBMARINE;
+        shipsToPlace[3] = Ship.ShipType.CRUISER;
+        shipsToPlace[4] = Ship.ShipType.DESTROYER;
 
-        for(Ship ship : shipsToPlace) {
+        for(Ship.ShipType shipTypeToPlace : shipsToPlace) {
             FieldDisplay.displayField(player.getField());
-            waitForUserToPressEnter();
 
-            System.out.print("Place your " + ship.getName() + " at (x,y,[H|V]): ");
-            String placement = input.readLine();
+            while(true) {
+                System.out.print("Place your " + shipTypeToPlace.name + " at (format: x,y,[H|V]): ");
+                String placement = input.readLine();
 
-            //TODO check placement string for validity
-            //parse placement into the ship
-            //try to place the ship, revolt if it fails
+                if(!isPlacementStringValid(placement)) {
+                    System.out.println("That wasn't a valid placement!");
+                } else {
+                    Ship shipToPlace = parsePlacementStringIntoShip(placement, shipTypeToPlace);
+
+                    try {
+                        player.placeShip(shipToPlace);
+                    } catch(Field.InvalidShipPlacementException e) {
+                        System.out.println("That wasn't a valid placement!");
+                        continue;
+                    }
+
+                    break;
+                }
+            }
         }
     }
 
@@ -63,5 +76,23 @@ public class Battleship {
         } catch (IOException e) {
             //Do nothing
         }
+    }
+
+    private boolean isPlacementStringValid(String placement) {
+        return Pattern.matches("[0-9]+,[0-9]+,(H|V)", placement);
+    }
+
+    private Ship parsePlacementStringIntoShip(String placement, Ship.ShipType shipType) {
+        String[] placementComponents = placement.split(",");
+
+        int shipX = Integer.valueOf(placementComponents[0]);
+        int shipY = Integer.valueOf(placementComponents[1]);
+
+        Ship.ShipOrientation shipOrientation = Ship.ShipOrientation.HORIZONTAL;
+        if(placementComponents[2].equals("V")) {
+            shipOrientation = Ship.ShipOrientation.VERTICAL;
+        }
+
+        return new Ship(shipX, shipY, shipOrientation, shipType);
     }
 }

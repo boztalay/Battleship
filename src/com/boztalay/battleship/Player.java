@@ -25,6 +25,10 @@ public class Player {
         return false;
     }
 
+    public void placeShip(Ship shipToPlace) throws Field.InvalidShipPlacementException {
+        field.addShip(shipToPlace);
+    }
+
     public boolean areAllShipsSunk() {
         return false;
     }
