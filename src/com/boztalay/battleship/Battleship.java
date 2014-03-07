@@ -13,23 +13,21 @@ public class Battleship {
     private Player player1;
     private Player player2;
 
-    private BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
-
     public void playBattleship() throws IOException {
         System.out.println("Welcome to Battleship!\n");
 
         System.out.print("Player 1, what's your name? ");
-        String player1Name = input.readLine();
+        String player1Name = ConsoleUtils.readLine();
         player1 = new Player(player1Name);
 
         System.out.print("Player 2, what's your name? ");
-        String player2Name = input.readLine();
+        String player2Name = ConsoleUtils.readLine();
         player2 = new Player(player2Name);
 
         runShipPlacementForPlayer(player1);
-        clearConsole();
+        ConsoleUtils.clearConsole();
         runShipPlacementForPlayer(player2);
-        clearConsole();
+        ConsoleUtils.clearConsole();
 
         //Game loop here
 
@@ -41,7 +39,7 @@ public class Battleship {
         System.out.println("For each ship, specify its placement with \"x,y,orientation\"");
         System.out.println("For example, a vertical ship at 2,2 would be \"2,2," + Ship.ShipOrientation.VERTICAL.shortName + "\". Use '" + Ship.ShipOrientation.HORIZONTAL.shortName + "' for horizontal.");
         System.out.println("Press enter to continue");
-        waitForUserToPressEnter();
+        ConsoleUtils.waitForUserToPressEnter();
 
         Ship.ShipType[] shipsToPlace = {
                 Ship.ShipType.CARRIER,
@@ -56,7 +54,7 @@ public class Battleship {
 
             while(true) {
                 System.out.print("Place your " + shipTypeToPlace.name + " at: ");
-                String placement = input.readLine();
+                String placement = ConsoleUtils.readLine();
 
                 try {
                     if(!isPlacementStringValid(placement)) {
@@ -76,15 +74,7 @@ public class Battleship {
 
         FieldDisplay.displayFieldForPlayer(player);
         System.out.println("All of your ships have been placed! Press enter to continue");
-        waitForUserToPressEnter();
-    }
-
-    private void waitForUserToPressEnter() {
-        try {
-            input.readLine();
-        } catch (IOException e) {
-            //Do nothing
-        }
+        ConsoleUtils.waitForUserToPressEnter();
     }
 
     private boolean isPlacementStringValid(String placement) {
@@ -103,12 +93,5 @@ public class Battleship {
         }
 
         return new Ship(shipX, shipY, shipOrientation, shipType);
-    }
-
-    private void clearConsole() {
-        //A little hacky, but there isn't a nice Java solution
-        for(int i = 0; i < 100; i++) {
-            System.out.println();
-        }
     }
 }
