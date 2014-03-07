@@ -33,7 +33,7 @@ public class Battleship {
         //End game
     }
 
-    private void runShipPlacementForPlayer(Player player) {
+    private void runShipPlacementForPlayer(Player player) throws IOException {
         System.out.println(player.getName() + ", place your ships! Press enter to continue");
         waitForUserToPressEnter();
 
@@ -47,12 +47,19 @@ public class Battleship {
         for(Ship ship : shipsToPlace) {
             FieldDisplay.displayField(player.getField());
             waitForUserToPressEnter();
+
+            System.out.print("Place your " + ship.getName() + " at (x,y,[H|V]): ");
+            String placement = input.readLine();
+
+            //TODO check placement string for validity
+            //parse placement into the ship
+            //try to place the ship, revolt if it fails
         }
     }
 
     private void waitForUserToPressEnter() {
         try {
-            System.in.read();
+            input.readLine();
         } catch (IOException e) {
             //Do nothing
         }

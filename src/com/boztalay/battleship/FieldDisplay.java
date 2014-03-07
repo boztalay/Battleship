@@ -11,12 +11,14 @@ public class FieldDisplay {
     private static char[][] buildCharacterFieldFromField(Field field) {
         char[][] charField = new char[field.getSize()][field.getSize()];
 
+        //Lay down all of the base characters from the field
         for(int x = 0; x < field.getSize(); x++) {
             for(int y = 0; y < field.getSize(); y++) {
                 charField[x][y] = field.getSpaceAt(x, y).displayChar;
             }
         }
 
+        //Draw the ships on top of it, a poor man's drawing buffer
         for(int i = 0; i < field.getNumberOfShips(); i++) {
             Ship shipToDisplay = field.getShip(i);
 
@@ -39,6 +41,7 @@ public class FieldDisplay {
         return charField;
     }
 
+    //Assumes the field's dimensions are both less than 99
     public static void displayField(char[][] field) {
         System.out.print("   ");
         for(int i = 0; i < field.length; i++) {
