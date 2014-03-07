@@ -4,27 +4,43 @@ package com.boztalay.battleship;
  * Holds the ship's location, orientation, length, and status
  */
 public class Ship {
+    public enum ShipType {
+        CARRIER("Aircraft Carrier", 5),
+        BATTLESHIP("Battleship", 4),
+        SUBMARINE("Submarine", 3),
+        CRUISER("Cruiser", 3),
+        DESTROYER("Destroyer", 2);
+
+        public final String name;
+        public final int length;
+
+        ShipType(String name, int length) {
+            this.name = name;
+            this.length = length;
+        }
+    }
+
     public enum ShipOrientation { HORIZONTAL, VERTICAL }
 
     private int x;
     private int y;
     private ShipOrientation orientation;
-    private int length;
+    private ShipType type;
     private int hits;
 
     public Ship() {
         this.x = 0;
         this.y = 0;
         orientation = ShipOrientation.HORIZONTAL;
-        this.length = 0;
+        this.type = ShipType.DESTROYER;
         this.hits = 0;
     }
 
-    public Ship(int x, int y, ShipOrientation orientation, int length) {
+    public Ship(int x, int y, ShipOrientation orientation, ShipType type) {
         this.x = x;
         this.y = y;
         this.orientation = orientation;
-        this.length = length;
+        this.type = type;
         this.hits = 0;
     }
 
@@ -40,7 +56,7 @@ public class Ship {
             shipCoordinateToCheck = this.y;
         }
 
-        if(shipCoordinateToCheck > (fieldSize - this.length)) {
+        if(shipCoordinateToCheck > (fieldSize - this.getLength())) {
             return false;
         }
 
@@ -56,18 +72,18 @@ public class Ship {
 
         if(otherShip.orientation == this.orientation) {
             if(this.orientation == ShipOrientation.HORIZONTAL) {
-                return (otherShip.doesOccupySpaceAt(this.x, this.y) || otherShip.doesOccupySpaceAt(this.x + this.length - 1, this.y));
+                return (otherShip.doesOccupySpaceAt(this.x, this.y) || otherShip.doesOccupySpaceAt(this.x + this.getLength() - 1, this.y));
             } else {
-                return (otherShip.doesOccupySpaceAt(this.x, this.y) || otherShip.doesOccupySpaceAt(this.x, this.y + this.length - 1));
+                return (otherShip.doesOccupySpaceAt(this.x, this.y) || otherShip.doesOccupySpaceAt(this.x, this.y + this.getLength() - 1));
             }
         } else {
             if(this.orientation == ShipOrientation.HORIZONTAL) {
-                if(otherShip.x >= this.x && otherShip.x < (this.x + this.length)) {
-                    return (this.y >= otherShip.y && this.y < (otherShip.y + otherShip.length));
+                if(otherShip.x >= this.x && otherShip.x < (this.x + this.getLength())) {
+                    return (this.y >= otherShip.y && this.y < (otherShip.y + otherShip.getLength()));
                 }
             } else {
-                if(this.x >= otherShip.x && this.x < (otherShip.x + otherShip.length)) {
-                    return (otherShip.y >= this.y && otherShip.y < (this.y + this.length));
+                if(this.x >= otherShip.x && this.x < (otherShip.x + otherShip.getLength())) {
+                    return (otherShip.y >= this.y && otherShip.y < (this.y + this.getLength()));
                 }
             }
         }
@@ -77,9 +93,9 @@ public class Ship {
 
     public boolean doesOccupySpaceAt(int x, int y) {
         if(orientation == ShipOrientation.HORIZONTAL && this.y == y) {
-            return (x >= this.x && x < (this.x + this.length));
+            return (x >= this.x && x < (this.x + this.getLength()));
         } else if(this.x == x) {
-            return (y >= this.y && y < (this.y + this.length));
+            return (y >= this.y && y < (this.y + this.getLength()));
         }
 
         return false;
@@ -90,7 +106,7 @@ public class Ship {
     }
 
     public boolean isSunk() {
-        return this.hits >= this.length;
+        return this.hits >= this.getLength();
     }
 
     public int getX() {
@@ -106,7 +122,11 @@ public class Ship {
     }
 
     public int getLength() {
-        return length;
+        return type.length;
+    }
+
+    public String getName() {
+        return type.name;
     }
 
     public int getHits() {
