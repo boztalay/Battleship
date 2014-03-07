@@ -1,5 +1,7 @@
 package com.boztalay.battleship;
 
+import com.sun.swing.internal.plaf.synth.resources.synth_sv;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -34,13 +36,18 @@ public class Battleship {
 
             runTurn(player1, player2);
             ConsoleUtils.clearConsole();
-            //Check endgame
+            if(isGameOver()) {
+                System.out.println(player1.getName() + " won! Congrats!");
+                break;
+            }
+
             runTurn(player2, player1);
             ConsoleUtils.clearConsole();
-            //Check endgame
+            if(isGameOver()) {
+                System.out.println(player2.getName() + " won! Congrats!");
+                break;
+            }
         }
-
-        //End game
     }
 
     private void runShipPlacementForPlayer(Player player) throws IOException {
@@ -147,7 +154,20 @@ public class Battleship {
         }
     }
 
-    boolean isShotCoordinateStringValid(String coordinate) {
+    private boolean isShotCoordinateStringValid(String coordinate) {
         return Pattern.matches("[0-9]+,[0-9]+", coordinate);
+    }
+
+    private boolean isGameOver() {
+        return (player1.areAllShipsSunk() || player2.areAllShipsSunk());
+    }
+
+    private void displayWinner(Player winner, Player loser) {
+        System.out.println(winner.getName() + " won! Congrats!\n");
+
+        FieldDisplay.displayFieldForPlayer(winner);
+        System.out.println();
+        FieldDisplay.displayFieldForPlayer(loser);
+        System.out.println();
     }
 }

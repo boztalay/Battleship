@@ -28,7 +28,13 @@ public class Player {
     }
 
     public boolean areAllShipsSunk() {
-        return false;
+        for(int i = 0; i < field.getNumberOfShips(); i++) {
+            if(!field.getShip(i).isSunk()) {
+                return false;
+            }
+        }
+
+        return true;
     }
 
     public String getName() {

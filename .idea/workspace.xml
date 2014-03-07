@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="43a85384-6fc8-4786-b8c3-e9e53e4d603f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Battleship.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,7 +78,7 @@
       <file leaf-file-name="Battleship.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="133" column="114" selection-start="5214" selection-end="5214" vertical-scroll-proportion="0.68085104" vertical-offset="1310" max-vertical-offset="2340">
+            <state line="135" column="0" selection-start="5194" selection-end="5194" vertical-scroll-proportion="0.32978722" vertical-offset="1640" max-vertical-offset="2610">
               <folding />
             </state>
           </provider>
@@ -89,12 +87,12 @@
       <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Player.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="20" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+            <state line="33" column="13" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
               <folding>
-                <element signature="e#798#799#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#861#862#0" expanded="true" />
-                <element signature="e#894#895#0" expanded="true" />
+                <element signature="e#957#958#0" expanded="true" />
+                <element signature="e#989#990#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1053#1054#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -103,7 +101,7 @@
       <file leaf-file-name="Field.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="87" column="33" selection-start="2221" selection-end="2221" vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1755">
+            <state line="71" column="0" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1755">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2474#2475#0" expanded="true" />
@@ -400,7 +398,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1745" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -412,13 +410,13 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33712512" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" x="5" y="764" width="1675" height="997" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3299595" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32988626" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16878103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16878103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.36711478" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="0" y="624" width="1680" height="1026" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -481,16 +479,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="9" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="87" column="33" selection-start="2221" selection-end="2221" vertical-scroll-proportion="0.0" vertical-offset="785" max-vertical-offset="1755">
+        <state line="71" column="0" selection-start="1639" selection-end="1639" vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1755">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2474#2475#0" expanded="true" />
@@ -501,19 +492,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="34" selection-start="523" selection-end="523" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
+        <state line="33" column="13" selection-start="889" selection-end="889" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="795">
           <folding>
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#830#831#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
-            <element signature="e#894#895#0" expanded="true" />
+            <element signature="e#957#958#0" expanded="true" />
+            <element signature="e#989#990#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1053#1054#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="9" selection-start="345" selection-end="345" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="133" column="114" selection-start="5214" selection-end="5214" vertical-scroll-proportion="0.68085104" vertical-offset="1310" max-vertical-offset="2340">
+        <state line="135" column="0" selection-start="5194" selection-end="5194" vertical-scroll-proportion="0.32978722" vertical-offset="1640" max-vertical-offset="2610">
           <folding />
         </state>
       </provider>
