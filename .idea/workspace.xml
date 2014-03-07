@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43a85384-6fc8-4786-b8c3-e9e53e4d603f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Main.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Battleship.iws" />
@@ -101,7 +98,7 @@
       <file leaf-file-name="Field.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Field.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="5" selection-start="653" selection-end="653" vertical-scroll-proportion="0.39021853" vertical-offset="0" max-vertical-offset="961">
+            <state line="47" column="5" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.48491156" vertical-offset="239" max-vertical-offset="1380">
               <folding />
             </state>
           </provider>
@@ -110,8 +107,19 @@
       <file leaf-file-name="Ship.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="25" column="39" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-              <folding />
+            <state line="53" column="25" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1815">
+              <folding>
+                <element signature="e#2867#2868#0" expanded="true" />
+                <element signature="e#2891#2892#0" expanded="true" />
+                <element signature="e#2916#2917#0" expanded="true" />
+                <element signature="e#2940#2941#0" expanded="true" />
+                <element signature="e#2987#2988#0" expanded="true" />
+                <element signature="e#3021#3022#0" expanded="true" />
+                <element signature="e#3051#3052#0" expanded="true" />
+                <element signature="e#3080#3081#0" expanded="true" />
+                <element signature="e#3108#3109#0" expanded="true" />
+                <element signature="e#3135#3136#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -132,8 +140,8 @@
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Main.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" />
-        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" />
+        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" />
       </list>
     </option>
   </component>
@@ -427,13 +435,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="39" selection-start="630" selection-end="630" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="2" selection-start="40" selection-end="40" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
@@ -441,9 +442,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="25" selection-start="1397" selection-end="1397" vertical-scroll-proportion="0.0" vertical-offset="295" max-vertical-offset="1815">
+          <folding>
+            <element signature="e#2867#2868#0" expanded="true" />
+            <element signature="e#2891#2892#0" expanded="true" />
+            <element signature="e#2916#2917#0" expanded="true" />
+            <element signature="e#2940#2941#0" expanded="true" />
+            <element signature="e#2987#2988#0" expanded="true" />
+            <element signature="e#3021#3022#0" expanded="true" />
+            <element signature="e#3051#3052#0" expanded="true" />
+            <element signature="e#3080#3081#0" expanded="true" />
+            <element signature="e#3108#3109#0" expanded="true" />
+            <element signature="e#3135#3136#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="25" column="5" selection-start="653" selection-end="653" vertical-scroll-proportion="0.39021853" vertical-offset="0" max-vertical-offset="961">
+        <state line="47" column="5" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.48491156" vertical-offset="239" max-vertical-offset="1380">
           <folding />
         </state>
       </provider>

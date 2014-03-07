@@ -7,13 +7,13 @@ import java.util.ArrayList;
  * along with hits and misses
  */
 public class Field {
-    public enum SquareType {EMPTY, MISS, HIT}
+    public enum SpaceType {EMPTY, MISS, HIT}
 
-    private SquareType[][] field;
+    private SpaceType[][] field;
     private ArrayList<Ship> ships;
 
     public Field(int fieldSize) {
-        field = new SquareType[fieldSize][fieldSize];
+        field = new SpaceType[fieldSize][fieldSize];
         ships = new ArrayList<Ship>();
     }
 
@@ -25,25 +25,62 @@ public class Field {
         ships.add(shipToAdd);
     }
 
-    public boolean isShipPlacementValid(Ship shipToCheck) {
-        if(shipToCheck.x < 0 || shipToCheck.y < 0 || shipToCheck.x >= field.length || shipToCheck.y >= field.length) {
+    private boolean isShipPlacementValid(Ship shipToCheck) {
+        if(!shipToCheck.isWithinFieldBounds(field.length)) {
             return false;
         }
 
-        int shipCoordinateToCheck = 0;
-        if(shipToCheck.orientation == Ship.ShipOrientation.HORIZONTAL) {
-            shipCoordinateToCheck = shipToCheck.x;
-        } else {
-            shipCoordinateToCheck = shipToCheck.y;
-        }
-
-        if(shipCoordinateToCheck > (field.length - shipToCheck.length)) {
+        if(doesShipIntersectExistingShips(shipToCheck)) {
             return false;
         }
 
         return true;
     }
 
-    public class InvalidShipPlacementException extends Exception {
+    private boolean doesShipIntersectExistingShips(Ship shipToCheck) {
+        for(Ship ship : ships) {
+            if(shipToCheck.doesIntersectShip(ship)) {
+                return true;
+            }
+        }
+
+        return false;
     }
+
+    public int getNumberOfShips() {
+        return ships.size();
+    }
+
+    public Ship getShip(int shipIndex) {
+        return ships.get(shipIndex);
+    }
+
+    public SpaceType attemptHitAt(int x, int y) throws ShotAtNonemptySpaceException {
+        if(field[x][y] == SpaceType.EMPTY) {
+            throw new ShotAtNonemptySpaceException();
+        }
+
+        Ship shipOccupyingSpace = getShipOccupyingSpaceAt(x, y);
+        if(shipOccupyingSpace == null) {
+            field[x][y] = SpaceType.MISS;
+        } else {
+            field[x][y] = SpaceType.HIT;
+            shipOccupyingSpace.hit();
+        }
+
+        return field[x][y];
+    }
+
+    private Ship getShipOccupyingSpaceAt(int x, int y) {
+        for(Ship ship : ships) {
+            if(ship.doesOccupySpaceAt(x, y)) {
+                return ship;
+            }
+        }
+
+        return null;
+    }
+
+    public class InvalidShipPlacementException extends Exception {}
+    public class ShotAtNonemptySpaceException extends Exception {}
 }
