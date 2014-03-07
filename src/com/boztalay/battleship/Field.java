@@ -70,7 +70,7 @@ public class Field {
         return ships.get(shipIndex);
     }
 
-    public SpaceType attemptHitAt(int x, int y) throws InvalidShotException {
+    public Ship attemptHitAt(int x, int y) throws InvalidShotException {
         if(field[x][y] != SpaceType.EMPTY) {
             throw new InvalidShotException();
         } else if(x < 0 || x >= getSize() || y < 0 || y >= getSize()) {
@@ -85,7 +85,7 @@ public class Field {
             shipOccupyingSpace.hit();
         }
 
-        return field[x][y];
+        return shipOccupyingSpace;
     }
 
     private Ship getShipOccupyingSpaceAt(int x, int y) {

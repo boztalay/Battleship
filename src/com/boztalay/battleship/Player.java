@@ -17,10 +17,10 @@ public class Player {
         this.name = name;
     }
 
-    public boolean attemptHitAt(int x, int y) throws Field.InvalidShotException {
-        Field.SpaceType space = field.attemptHitAt(x, y);
+    public Ship attemptHitAt(int x, int y) throws Field.InvalidShotException {
+        Ship shipHit = field.attemptHitAt(x, y);
 
-        return (space == Field.SpaceType.HIT);
+        return shipHit;
     }
 
     public void placeShip(Ship shipToPlace) throws Field.InvalidShipPlacementException {

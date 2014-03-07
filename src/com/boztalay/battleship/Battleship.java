@@ -125,11 +125,14 @@ public class Battleship {
                 int shotX = Integer.valueOf(coordinateComponents[0]);
                 int shotY = Integer.valueOf(coordinateComponents[1]);
 
-                boolean didShotHit = otherPlayer.attemptHitAt(shotX, shotY);
+                Ship shipHit = otherPlayer.attemptHitAt(shotX, shotY);
 
                 System.out.println();
-                if(didShotHit) {
+                if(shipHit != null) {
                     System.out.println("That was a hit!");
+                    if(shipHit.isSunk()) {
+                        System.out.println("You sunk " + otherPlayer.getName() + "'s " + shipHit.getName() + "!");
+                    }
                 } else {
                     System.out.println("That was a miss!");
                 }
