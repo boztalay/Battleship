@@ -6,7 +6,7 @@ package com.boztalay.battleship.engine;
 public class Ship {
     public enum ShipType {
         CARRIER("Aircraft Carrier", 5),
-        BATTLESHIP("BattleshipCLI", 4),
+        BATTLESHIP("Battleship", 4),
         SUBMARINE("Submarine", 3),
         CRUISER("Cruiser", 3),
         DESTROYER("Destroyer", 2);
