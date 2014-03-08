@@ -1,4 +1,4 @@
-package com.boztalay.battleship;
+package com.boztalay.battleship.cli;
 
 import java.io.BufferedReader;
 import java.io.IOException;

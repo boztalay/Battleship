@@ -1,4 +1,4 @@
-package com.boztalay.battleship;
+package com.boztalay.battleship.engine;
 
 import java.util.ArrayList;
 import java.util.Arrays;

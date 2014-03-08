@@ -1,4 +1,4 @@
-package com.boztalay.battleship;
+package com.boztalay.battleship.engine;
 
 /**
  *  Responsible for updating the field with
@@ -6,14 +6,12 @@ package com.boztalay.battleship;
  *  and determining when the player has lost
  */
 public class Player {
-    private static final int FIELD_SIZE = 10;
-
     private Field field;
 
     private String name;
 
-    public Player(String name) {
-        field = new Field(FIELD_SIZE);
+    public Player(String name, int fieldSize) {
+        field = new Field(fieldSize);
         this.name = name;
     }
 

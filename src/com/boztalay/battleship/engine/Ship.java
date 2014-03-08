@@ -1,4 +1,4 @@
-package com.boztalay.battleship;
+package com.boztalay.battleship.engine;
 
 /**
  * Holds the ship's location, orientation, length, and status
@@ -6,7 +6,7 @@ package com.boztalay.battleship;
 public class Ship {
     public enum ShipType {
         CARRIER("Aircraft Carrier", 5),
-        BATTLESHIP("Battleship", 4),
+        BATTLESHIP("BattleshipCLI", 4),
         SUBMARINE("Submarine", 3),
         CRUISER("Cruiser", 3),
         DESTROYER("Destroyer", 2);

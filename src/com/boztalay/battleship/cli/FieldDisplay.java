@@ -1,4 +1,8 @@
-package com.boztalay.battleship;
+package com.boztalay.battleship.cli;
+
+import com.boztalay.battleship.engine.Field;
+import com.boztalay.battleship.engine.Player;
+import com.boztalay.battleship.engine.Ship;
 
 public class FieldDisplay {
     private static final char SHIP_CHAR = 'S';
