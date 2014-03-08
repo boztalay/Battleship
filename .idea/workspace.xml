@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="43a85384-6fc8-4786-b8c3-e9e53e4d603f" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/BattleshipEngine.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/ConsoleUtils.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/cli/ConsoleUtils.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Field.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/FieldDisplay.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/cli/FieldDisplay.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Main.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Main.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/Ship.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java" afterPath="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java" />
     </list>
     <ignored path="Battleship.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -73,87 +68,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="32" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+            <state line="17" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.2712766" vertical-offset="0" max-vertical-offset="940">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BattleshipCLI.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="44" selection-start="454" selection-end="454" vertical-scroll-proportion="0.14563107" vertical-offset="0" max-vertical-offset="3105">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BattleshipEngine.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/BattleshipEngine.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="60" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3075">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1120#1121#0" expanded="true" />
-                <element signature="e#1162#1163#0" expanded="true" />
-                <element signature="e#5708#5709#0" expanded="true" />
-                <element signature="e#5738#5739#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Field.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="0" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1755">
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2481#2482#0" expanded="true" />
-                <element signature="e#2516#2517#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Player.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="16" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FieldDisplay.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/FieldDisplay.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="74" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1305">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Ship.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="124" column="23" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="2250">
-              <folding>
-                <element signature="e#3542#3543#0" expanded="true" />
-                <element signature="e#3566#3567#0" expanded="true" />
-                <element signature="e#3615#3616#0" expanded="true" />
-                <element signature="e#3662#3663#0" expanded="true" />
-                <element signature="e#3696#3697#0" expanded="true" />
-                <element signature="e#3726#3727#0" expanded="true" />
-                <element signature="e#3760#3761#0" expanded="true" />
-                <element signature="e#3791#3792#0" expanded="true" />
-                <element signature="e#3823#3824#0" expanded="true" />
-                <element signature="e#3851#3852#0" expanded="true" />
-                <element signature="e#3878#3879#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -179,10 +98,12 @@
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Player.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/Battleship.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/cli/Battleship.java" />
-        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Main.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/BattleshipEngine.java" />
         <option value="$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java" />
+        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java" />
+        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java" />
+        <option value="$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java" />
       </list>
     </option>
   </component>
@@ -252,32 +173,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="battleship" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="engine" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Battleship" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Battleship" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="battleship" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="cli" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,7 +342,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1745" y="24" width="1855" height="1056" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -466,7 +361,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16878103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16878103" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="true" weight="0.36711478" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" x="1" y="652" width="1678" height="997" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -495,32 +390,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="124" column="23" selection-start="3592" selection-end="3592" vertical-scroll-proportion="0.0" vertical-offset="1301" max-vertical-offset="2250">
-          <folding>
-            <element signature="e#3542#3543#0" expanded="true" />
-            <element signature="e#3566#3567#0" expanded="true" />
-            <element signature="e#3615#3616#0" expanded="true" />
-            <element signature="e#3662#3663#0" expanded="true" />
-            <element signature="e#3696#3697#0" expanded="true" />
-            <element signature="e#3726#3727#0" expanded="true" />
-            <element signature="e#3760#3761#0" expanded="true" />
-            <element signature="e#3791#3792#0" expanded="true" />
-            <element signature="e#3823#3824#0" expanded="true" />
-            <element signature="e#3851#3852#0" expanded="true" />
-            <element signature="e#3878#3879#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/FieldDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="74" selection-start="788" selection-end="788" vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="1305">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/ConsoleUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="24" selection-start="400" selection-end="400" vertical-scroll-proportion="0.17553191" vertical-offset="0" max-vertical-offset="940">
@@ -528,9 +397,50 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Ship.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="102" column="58" selection-start="3083" selection-end="3083" vertical-scroll-proportion="1.6276596" vertical-offset="0" max-vertical-offset="2235">
+          <folding>
+            <element signature="e#3507#3508#0" expanded="true" />
+            <element signature="e#3531#3532#0" expanded="true" />
+            <element signature="e#3556#3557#0" expanded="true" />
+            <element signature="e#3580#3581#0" expanded="true" />
+            <element signature="e#3627#3628#0" expanded="true" />
+            <element signature="e#3661#3662#0" expanded="true" />
+            <element signature="e#3691#3692#0" expanded="true" />
+            <element signature="e#3725#3726#0" expanded="true" />
+            <element signature="e#3756#3757#0" expanded="true" />
+            <element signature="e#3788#3789#0" expanded="true" />
+            <element signature="e#3816#3817#0" expanded="true" />
+            <element signature="e#3843#3844#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/FieldDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="74" selection-start="788" selection-end="788" vertical-scroll-proportion="-0.06382979" vertical-offset="315" max-vertical-offset="1305">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="5" selection-start="514" selection-end="514" vertical-scroll-proportion="0.30319148" vertical-offset="0" max-vertical-offset="940">
+          <folding>
+            <element signature="e#931#932#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#994#995#0" expanded="true" />
+            <element signature="e#1027#1028#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Field.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="0" selection-start="1646" selection-end="1646" vertical-scroll-proportion="0.0" vertical-offset="815" max-vertical-offset="1755">
+        <state line="80" column="5" selection-start="2078" selection-end="2078" vertical-scroll-proportion="0.7446808" vertical-offset="500" max-vertical-offset="1755">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2481#2482#0" expanded="true" />
@@ -539,16 +449,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Player.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="16" selection-start="400" selection-end="400" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="705">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/BattleshipEngine.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="60" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3075">
+        <state line="160" column="42" selection-start="4899" selection-end="4925" vertical-scroll-proportion="1.2393616" vertical-offset="1235" max-vertical-offset="3075">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1120#1121#0" expanded="true" />
@@ -559,16 +462,16 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="32" selection-start="405" selection-end="405" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="345">
+        <state line="207" column="0" selection-start="8179" selection-end="8179" vertical-scroll-proportion="3.252427" vertical-offset="0" max-vertical-offset="3105">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/cli/BattleshipCLI.java">
+    <entry file="file://$PROJECT_DIR$/src/com/boztalay/battleship/engine/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="44" selection-start="454" selection-end="454" vertical-scroll-proportion="0.14563107" vertical-offset="0" max-vertical-offset="3105">
+        <state line="17" column="0" selection-start="424" selection-end="424" vertical-scroll-proportion="0.2712766" vertical-offset="0" max-vertical-offset="940">
           <folding />
         </state>
       </provider>

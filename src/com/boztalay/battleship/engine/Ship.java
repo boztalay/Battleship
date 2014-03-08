@@ -72,7 +72,6 @@ public class Ship {
         return true;
     }
 
-    //This could use some cleaning
     //A ship can't intersect itself
     public boolean doesIntersectShip(Ship otherShip) {
         if(this == otherShip) {

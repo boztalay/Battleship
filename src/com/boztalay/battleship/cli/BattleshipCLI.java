@@ -134,7 +134,7 @@ public class BattleshipCLI {
         }
     }
 
-    private void fireAtCurrentEnemy(Player playerGoing, Player enemyPlayer) {
+    private void fireAtCurrentEnemy(Player playerGoing, Player enemyPlayer) throws BattleshipEngine.WrongStateException {
         FieldDisplay.displayFieldForPlayer(playerGoing);
         System.out.println();
         FieldDisplay.displayFieldForPlayerWithoutShips(enemyPlayer);
@@ -152,7 +152,7 @@ public class BattleshipCLI {
                 int shotX = Integer.valueOf(coordinateComponents[0]);
                 int shotY = Integer.valueOf(coordinateComponents[1]);
 
-                Ship shipHit = enemyPlayer.attemptHitAt(shotX, shotY);
+                Ship shipHit = battleshipEngine.fireOnCurrentEnemyPlayerAt(shotX, shotY);
 
                 System.out.println();
                 if(shipHit != null) {

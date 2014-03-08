@@ -62,14 +62,6 @@ public class Field {
         return false;
     }
 
-    public int getNumberOfShips() {
-        return ships.size();
-    }
-
-    public Ship getShip(int shipIndex) {
-        return ships.get(shipIndex);
-    }
-
     public Ship attemptHitAt(int x, int y) throws InvalidShotException {
         if(field[x][y] != SpaceType.EMPTY) {
             throw new InvalidShotException();
@@ -96,6 +88,14 @@ public class Field {
         }
 
         return null;
+    }
+
+    public int getNumberOfShips() {
+        return ships.size();
+    }
+
+    public Ship getShip(int shipIndex) {
+        return ships.get(shipIndex);
     }
 
     public int getSize() {

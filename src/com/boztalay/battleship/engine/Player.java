@@ -15,14 +15,14 @@ public class Player {
         this.name = name;
     }
 
+    public void placeShip(Ship shipToPlace) throws Field.InvalidShipPlacementException {
+        field.addShip(shipToPlace);
+    }
+
     public Ship attemptHitAt(int x, int y) throws Field.InvalidShotException {
         Ship shipHit = field.attemptHitAt(x, y);
 
         return shipHit;
-    }
-
-    public void placeShip(Ship shipToPlace) throws Field.InvalidShipPlacementException {
-        field.addShip(shipToPlace);
     }
 
     public boolean areAllShipsSunk() {
